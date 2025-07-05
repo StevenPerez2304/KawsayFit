@@ -1,0 +1,34 @@
+[
+  {
+    "id": "ceviche-camaron",
+    "titulo": "Ceviche de Camarón",
+    "imagen": "images/Encebollado.png",
+    "porcion": "1 porción (456 g)",
+    "calorias": "208",
+    "proteinas": "34.0 g",
+    "carbohidratos": "19.0 g",
+    "ingredientes": [
+      { "nombre": "Camarones", "cantidad": "160 g" },
+      { "nombre": "Zumo de limon", "cantidad": "90 g" },
+      { "nombre": "Cebolla", "cantidad": "75 g" },
+      { "nombre": "Tomate", "cantidad": "65 g" },
+      { "nombre": "Cilantro", "cantidad": "6 g" }
+    ]
+  },
+
+
+  {
+    "id": "encebollado",
+    "titulo": "Encebollado",
+    "imagen": "images/Encebollado.png",
+    "porcion": "1 porción (500 g)",
+    "calorias": "280",
+    "proteinas": "25.0 g",
+    "carbohidratos": "30.0 g",
+    "ingredientes": [
+      { "nombre": "Atún", "cantidad": "150 g" },
+      { "nombre": "Yuca", "cantidad": "100 g" },
+      { "nombre": "Cebolla", "cantidad": "80 g" }
+    ]
+  }
+]

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comidas - Comidas Ecuatorianas</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>Comidas Ecuatorianas y demas</h1>
+        <nav>
+            <a href="#" class="user-profile">Perfil</a>
+            <button id="logoutBtn">Cerrar Sesión</button>
+        </nav>
+    </header>
+    
+    <main>
+<div id="filtros" style="position: relative;">
+  <input type="text" id="buscador" placeholder="Buscar comidas...">
+  <ul id="sugerencias" class="sugerencias-lista"></ul>
+</div>
+        
+        <div id="lista-comidas" class="grid-comidas">
+            <!-- Las comidas se cargarán aquí con JavaScript -->
+        </div>
+    </main>
+    
+    <script src="script.js"></script>
+</body>
+</html>
