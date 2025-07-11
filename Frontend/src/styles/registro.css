@@ -1,0 +1,183 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente elegante */
+body {
+  font-family: 'Montserrat', sans-serif; /* Asegúrate de que esta fuente esté importada si la usas */
+  background: #f5f6fa;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+/* Contenedor principal */
+.auth-container {
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+}
+
+/* Tarjeta centrada */
+.auth-card {
+  background-color: #fff;
+  border-radius: 16px;
+  padding: 30px 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+}
+
+/* Título elegante */
+.auth-title {
+  font-size: 28px;
+  color: #2c3e50;
+  margin-bottom: 12px;
+}
+
+/* Subtítulo (si lo tuvieras, no está en tu HTML actual, pero lo mantengo por si acaso) */
+.auth-subtitle {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 24px;
+}
+
+/* Formulario */
+.auth-form .form-group {
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+.auth-form label {
+  font-weight: 600;
+  font-size: 14px;
+  display: block;
+  margin-bottom: 6px;
+  color: #34495e;
+}
+
+.auth-form input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.auth-form input:focus {
+  border-color: #4CA1AF;
+  box-shadow: 0 0 8px rgba(76, 161, 175, 0.2);
+  outline: none;
+}
+
+/* **NUEVAS REGLAS para el enlace de "Olvidaste tu contraseña"** */
+.password-field-group {
+    position: relative; /* Establece el contexto para el posicionamiento absoluto del enlace */
+    padding-bottom: 25px; /* Crea espacio en la parte inferior para que el enlace no se superponga */
+}
+
+.forgot-password {
+    position: absolute; /* Saca el enlace del flujo normal */
+    right: 0;           /* Lo alinea a la derecha del padre (.password-field-group) */
+    bottom: 0;          /* Lo alinea a la parte inferior del padre */
+    font-size: 0.8em;
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.forgot-password:hover {
+    text-decoration: underline;
+}
+/* **FIN NUEVAS REGLAS** */
+
+
+/* Botón */
+.auth-button {
+  width: 100%;
+  padding: 12px;
+  background: linear-gradient(to right, #4CA1AF, #2C3E50);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px; /* Ajusta este margen si es necesario por el padding-bottom del grupo anterior */
+  text-decoration: none; /* Asegura que no tenga subrayado por defecto */
+  display: inline-block; /* Para que el ancho 100% y el padding funcionen correctamente en un <a> */
+}
+
+.auth-button:hover {
+  background: linear-gradient(to right, #2C3E50, #4CA1AF);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Footer */
+.auth-footer {
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-footer a {
+  color: #4CA1AF;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+/* Estilos para Modal (no relacionados con la pregunta, pero los mantengo de tu código original) */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.modal-content h2 {
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.modal-content p {
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px;
+  right: 14px;
+  font-size: 22px;
+  cursor: pointer;
+  color: #888;
+}
+
+.close-btn:hover {
+  color: #000;
+}

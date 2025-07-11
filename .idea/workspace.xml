@@ -6,11 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="42c2eb2d-7f43-4de5-bec5-42d56dff05a1" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.~oyectoInfo.docx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/forgot-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/forgot-password.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/images/tu-imagen.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Frontend/src/reset-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/Frontend/src/reset-password.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/ProyectoInfo.docx" beforeDir="false" afterPath="$PROJECT_DIR$/ProyectoInfo.docx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -28,9 +23,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="2zSgbZXD66lGvB8BrsMrloJ31Bp" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -42,7 +37,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/anderson15/Escritorio/KawsayFit",
+    "last_opened_file_path": "/home/anderson15/Escritorio/WorkSpace_SegundoSemestre/POO/jbrew-web",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,6 +63,7 @@
       <option name="presentableId" value="Default" />
       <updated>1751729960921</updated>
       <workItem from="1751729962292" duration="667000" />
+      <workItem from="1752068050862" duration="22000" />
     </task>
     <servers />
   </component>

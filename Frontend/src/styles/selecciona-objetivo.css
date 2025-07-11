@@ -1,0 +1,92 @@
+/* Estilos base que ya tenías */
+.container {
+  max-width: 480px;
+  margin: 40px auto;
+  padding: 25px 20px;
+  font-family: 'Montserrat', sans-serif;
+  color: #2c3e50;
+  text-align: center;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 8px;
+  color: #2c3e50;
+}
+
+.subtitle {
+  font-size: 14px;
+  color: #7f8c8d;
+  margin-bottom: 25px;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+/* Nuevos estilos para el selector de tarjetas */
+.card-selector {
+  display: flex;
+  flex-direction: column;
+}
+
+.option-card {
+  padding: 0;
+  border-radius: 16px;
+  background-color: #f8f9fa;
+  border: 2px solid #e9ecef;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card-content {
+  padding: 20px;
+  text-align: left;
+}
+
+.radio-input {
+  position: absolute;
+  opacity: 0;
+}
+
+/* Efecto hover */
+.option-card:hover {
+  background-color: #eef6fb;
+}
+
+/* Efecto cuando está "seleccionado" (focus) */
+.option-card:focus-within,
+.option-card:has(.radio-input:checked) {
+  border-color: #4CA1AF;
+  background-color: #e8f4fc;
+  box-shadow: 0 4px 15px rgba(76, 161, 175, 0.4);
+}
+
+.next-button {
+  display: inline-block;
+  padding: 12px 28px;
+  background: linear-gradient(to right, #4CA1AF, #2C3E50);
+  color: white;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.next-button:hover {
+  background: linear-gradient(to right, #2C3E50, #4CA1AF);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.2);
+  transform: translateY(-2px);
+}

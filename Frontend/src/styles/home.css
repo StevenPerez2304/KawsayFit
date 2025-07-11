@@ -1,0 +1,273 @@
+:root {
+  --primary-color: #4CA1AF; /* Azul claro principal */
+  --secondary-color: #e8f4fc; /* Azul muy claro */
+  --accent-color: #2C3E50; /* Azul oscuro */
+  --text-color: #2c3e50;
+  --light-text: #f8f8f8;
+  --shadow: 0 8px 25px rgba(44, 62, 80, 0.12);
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #f5f6fa;
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* Header estilizado */
+header {
+  background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+  color: var(--light-text);
+  padding: 1.5rem 2rem;
+  box-shadow: var(--shadow);
+  position: relative;
+  z-index: 3;
+  overflow: hidden;
+}
+
+header::before {
+  content: "";
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: url('https://images.unsplash.com/photo-1518983175-75f6a8fe2094?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+header h1 {
+  font-size: 2.5rem;
+  margin: 0;
+  position: relative;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.3);
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+header nav {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+header nav a {
+  color: var(--light-text);
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.6rem 1.2rem;
+  border-radius: 20px;
+  background-color: rgba(76, 161, 175, 0.8);
+  border: 1px solid rgba(44, 62, 80, 0.3);
+  transition: var(--transition);
+  font-size: 1rem;
+}
+
+header nav a:hover {
+  background-color: var(--accent-color);
+  box-shadow: 0 8px 25px rgba(44, 62, 80, 0.2);
+  transform: translateY(-2px);
+}
+
+/* Main */
+main {
+  max-width: 900px;
+  margin: 2.5rem auto;
+  padding: 2rem;
+  position: relative;
+  z-index: 1;
+  background-color: rgba(245, 246, 248, 0.98);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+}
+
+/* Buscador */
+#filtros {
+  margin-bottom: 2.5rem;
+  position: relative;
+  text-align: center;
+}
+
+#buscador {
+  width: 80%;
+  max-width: 600px;
+  padding: 1.2rem 1.8rem;
+  font-size: 1.2rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 30px;
+  outline: none;
+  background-color: var(--light-text);
+  font-family: 'Montserrat', sans-serif;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  display: inline-block;
+}
+
+#buscador:focus {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 4px rgba(44, 62, 80, 0.25);
+  background-color: white;
+}
+
+/* Sugerencias */
+.sugerencias-lista {
+  position: absolute;
+  width: 80%;
+  max-width: 600px;
+  left: 50%;
+  transform: translateX(-50%);
+  max-height: 280px;
+  overflow-y: auto;
+  background: var(--light-text);
+  border: 1px solid #ddd;
+  border-radius: 0 0 16px 16px;
+  box-shadow: var(--shadow);
+  z-index: 100;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: none;
+}
+
+.sugerencias-lista li {
+  padding: 0.8rem 1.5rem;
+  cursor: pointer;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: var(--transition);
+}
+
+.sugerencias-lista li:hover {
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+/* Grid comidas */
+.grid-comidas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 2rem;
+}
+
+/* Card comida */
+.comida-card {
+  background: var(--light-text);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  position: relative;
+  cursor: pointer;
+}
+
+.comida-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 30px rgba(44, 62, 80, 0.2);
+}
+
+.comida-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 4px solid var(--primary-color);
+}
+
+.comida-info {
+  padding: 1.5rem 2rem;
+}
+
+.comida-nombre {
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+  color: var(--accent-color);
+  font-weight: 700;
+}
+
+.comida-descripcion {
+  color: #666;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+.comida-precio {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.3rem;
+}
+
+.comida-region {
+  display: inline-block;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+}
+
+/* Decoración */
+.decorative-border {
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
+  margin: 2rem 0;
+  border-radius: 2px;
+}
+
+/* GIF decorativo */
+.video-decorativo {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 280px;
+  height: 100vh;
+  z-index: -2;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.video-decorativo img.gif-fondo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.75;
+  transition: opacity 0.5s ease;
+}
+
+.video-decorativo:hover img.gif-fondo {
+  opacity: 0.95;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0; left: 0; width: 100%; height: 100%;
+  background: linear-gradient(to right, rgba(245, 246, 248, 0.95) 0%, rgba(245, 246, 248, 0) 50%);
+  z-index: -1;
+}
+
+/* Responsive */
+
+@media (max-width: 1200px) {
+  main {
+    max-width: 800px;
+  }
+  .sugerencias-lista,
+  #buscador {
+    max-width: 500px;
+  }
+}
+
+@media (max-width: 900px) {
+  main {
+    max-width: 700px;
+  }
+  .sugerencias-lista,
+  #buscador {
+    max-width: 450px;
+  }
+  .grid-comidas {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr

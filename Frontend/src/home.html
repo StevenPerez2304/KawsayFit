@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Comidas - Comidas Ecuatorianas</title>
-    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/home.css" />
 </head>
 <body>
+    <div class="video-decorativo">
+        <img src="images/pasta-20023_256.gif" alt="Pasta decorativa" class="gif-fondo" />
+        <div class="video-overlay"></div>
+    </div>
+
     <header>
-        <h1>Comidas Ecuatorianas y demas</h1>
+        <h1>Comidas Ecuatorianas y demás</h1>
         <nav>
-            <a href="#" class="user-profile">Perfil</a>
-            <button id="logoutBtn">Cerrar Sesión</button>
+            <a href="perfil.html" class="user-profile">Perfil</a>
+            <a href="iniciar-sesion.html" id="logoutBtn">Cerrar Sesión</a>
         </nav>
     </header>
-    
+
     <main>
-<div id="filtros" style="position: relative;">
-  <input type="text" id="buscador" placeholder="Buscar comidas...">
-  <ul id="sugerencias" class="sugerencias-lista"></ul>
-</div>
-        
-        <div id="lista-comidas" class="grid-comidas">
-            <!-- Las comidas se cargarán aquí con JavaScript -->
+        <div id="filtros">
+            <input type="text" id="buscador" placeholder="Buscar comidas..." autocomplete="off" />
+            <ul id="sugerencias" class="sugerencias-lista" aria-placeholder="Busque las comidas"></ul>
         </div>
+
+        <div id="lista-comidas" class="grid-comidas"></div>
     </main>
-    
+
     <script src="script.js"></script>
 </body>
 </html>

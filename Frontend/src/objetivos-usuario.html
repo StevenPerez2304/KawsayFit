@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personaliza tu Objetivo</title>
+    <link rel="stylesheet" href="styles/objetivos-usuario.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Personaliza tu objetivo</h1>
+        <p class="subtitle">Último paso para conocer tus calorías y macronutrientes</p>
+        
+        <div class="input-group">
+            <label>Peso actual</label>
+            <div class="input-with-unit">
+                <input type="number" placeholder="Ingresa tu peso actual" class="input-value" pattern="[0-9]*" inputmode="numeric">
+                <span class="unit">kg</span>
+            </div>
+        </div>
+        
+        <div class="input-group">
+            <label>Peso objetivo</label>
+            <select class="form-select">
+                <option>Seleccionar</option>
+                <option>40 kg</option>
+                <option>45 kg</option>
+                <option>50 kg</option>
+                <option>55 kg</option>
+                <option>60 kg</option>
+                <option>65 kg</option>
+                <option>70 kg</option>
+                <option>75 kg</option>
+                <option>80 kg</option>
+                <option>85 kg</option>
+                <option>90 kg</option>
+                <option>95 kg</option>
+                <option>100 kg</option>
+                <option>105 kg</option>
+                <option>110 kg</option>
+                <option>115 kg</option>
+                <option>120 kg</option>
+            </select>
+        </div>
+        
+        <div class="input-group">
+            <label>Velocidad</label>
+            <div class="speed-options">
+                <label class="speed-option">
+                    <input type="radio" name="speed" value="lento" class="speed-input">
+                    <span class="speed-label">Lento</span>
+                </label>
+                <label class="speed-option">
+                    <input type="radio" name="speed" value="moderado" class="speed-input" checked>
+                    <span class="speed-label">Moderado</span>
+                </label>
+                <label class="speed-option">
+                    <input type="radio" name="speed" value="rapido" class="speed-input">
+                    <span class="speed-label">Rápido</span>
+                </label>
+            </div>
+        </div>
+        
+        <a href="resultados.html" class="create-plan-button">Crear mi Plan</a>
+    </div>
+</body>
+</html>

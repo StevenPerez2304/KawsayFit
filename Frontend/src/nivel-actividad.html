@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nivel de Actividad</title>
+    <link rel="stylesheet" href="styles/nivel-actividad.css">
+</head>
+<body>
+    <div class="container">
+        <h1>¿Cuál es tu nivel de actividad física?</h1>
+        
+        <form class="activity-form" action="entrenamiento-fuerza.html" method="get">
+            <div class="activity-options">
+                <label class="activity-option">
+                    <input type="radio" name="activity-level" value="sedentario" class="radio-input">
+                    <div class="option-content">
+                        <h3>Sedentario</h3>
+                        <p>Poco o nada de ejercicio</p>
+                    </div>
+                </label>
+                
+                <label class="activity-option">
+                    <input type="radio" name="activity-level" value="ligeramente-activo" class="radio-input">
+                    <div class="option-content">
+                        <h3>Ligeramente Activo</h3>
+                        <p>Ejercicio 2 a 3 días por semana</p>
+                    </div>
+                </label>
+                
+                <label class="activity-option">
+                    <input type="radio" name="activity-level" value="moderadamente-activo" class="radio-input" checked>
+                    <div class="option-content">
+                        <h3>Moderadamente Activo</h3>
+                        <p>Ejercicio 4 a 5 días por semana</p>
+                    </div>
+                </label>
+                
+                <label class="activity-option">
+                    <input type="radio" name="activity-level" value="muy-activo" class="radio-input">
+                    <div class="option-content">
+                        <h3>Muy Activo</h3>
+                        <p>Ejercicio 6 a 7 días por semana</p>
+                    </div>
+                </label>
+                
+                <label class="activity-option">
+                    <input type="radio" name="activity-level" value="atleta" class="radio-input">
+                    <div class="option-content">
+                        <h3>Atleta Profesional</h3>
+                        <p>Ejercicio intenso 6 a 7 días por semana</p>
+                    </div>
+                </label>
+            </div>
+            
+            <p class="note">No te preocupes, luego lo puedes cambiar</p>
+            <button type="submit" class="next-button">Continuar</button>
+        </form>
+    </div>
+</body>
+</html>

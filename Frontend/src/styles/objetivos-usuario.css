@@ -1,0 +1,204 @@
+/* styles/objetivos-usuario.css - Estilos completos para Personalizar Objetivo */
+.container {
+    max-width: 480px;
+    margin: 40px auto;
+    padding: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #2c3e50;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    text-align: center;
+    color: #3498db;
+    font-weight: 600;
+}
+
+.subtitle {
+    font-size: 14px;
+    color: #7f8c8d;
+    text-align: center;
+    margin-bottom: 30px;
+    line-height: 1.4;
+}
+
+.input-group {
+    margin-bottom: 25px;
+}
+
+.input-group label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: 500;
+    color: #2c3e50;
+    font-size: 15px;
+}
+
+/* Estilos para input de peso con unidad */
+.input-with-unit {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.input-value {
+    width: 100%;
+    padding: 14px 45px 14px 14px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    border: 1px solid #e0e3e7;
+    font-size: 15px;
+    transition: border-color 0.3s;
+}
+
+.input-value:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+.unit {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #7f8c8d;
+    pointer-events: none;
+    font-size: 14px;
+}
+
+/* Estilos para el select */
+.form-select {
+    width: 100%;
+    padding: 14px;
+    border-radius: 10px;
+    border: 1px solid #e0e3e7;
+    background-color: white;
+    font-size: 15px;
+    appearance: none;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%237f8c8d'%3e%3cpath d='M7 10l5 5 5-5z'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    background-size: 16px;
+    transition: border-color 0.3s;
+}
+
+.form-select:focus {
+    border-color: #3498db;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+}
+
+/* Estilos para el selector de velocidad (sin JS) */
+.speed-options {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+}
+
+.speed-option {
+    flex: 1;
+    position: relative;
+    cursor: pointer;
+}
+
+.speed-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.speed-label {
+    display: block;
+    padding: 14px 10px;
+    text-align: center;
+    border-radius: 10px;
+    background-color: #f8f9fa;
+    border: 1px solid #e0e3e7;
+    transition: all 0.3s;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.speed-input:checked + .speed-label {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+    box-shadow: 0 2px 8px rgba(52, 152, 219, 0.2);
+}
+
+.speed-input:focus + .speed-label {
+    outline: 2px solid #2980b9;
+    outline-offset: 2px;
+}
+
+.speed-label:hover {
+    background-color: #e9f4fc;
+    border-color: #c2e0ff;
+}
+
+/* Estilos para el botón principal */
+.create-plan-button {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background-color: #3498db;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s;
+    margin-top: 25px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    box-shadow: 0 2px 6px rgba(52, 152, 219, 0.2);
+}
+
+.create-plan-button:hover {
+    background-color: #2980b9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 8px rgba(41, 128, 185, 0.3);
+}
+
+.create-plan-button:active {
+    transform: translateY(0);
+}
+
+/* Estilos para inputs numéricos */
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 500px) {
+    .container {
+        margin: 20px 15px;
+        padding: 18px;
+        border-radius: 10px;
+    }
+    
+    .speed-options {
+        flex-direction: column;
+    }
+    
+    .speed-label {
+        padding: 12px;
+    }
+    
+    .create-plan-button {
+        padding: 14px;
+    }
+}

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Perfil</title>
+    <link rel="stylesheet" href="styles/perfil.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <div class="container profile-container">
+        <div class="profile-header">
+            <div class="buttons-container">
+                <img src="https://via.placeholder.com/100" alt="Avatar" class="avatar-img">
+                <div class="buttons-container">
+                <a href="home.html" class="regresar-btn">Regresar</a>
+                </div>
+
+                <button class="edit-avatar-btn">✏️</button>
+            </div>
+            <h1>Juan Pérez</h1>
+            <p class="profile-email">juan.perez@example.com</p>
+            
+            <!-- Objetivo del usuario -->
+            <div class="user-goal-badge">
+                <span class="goal-icon">🏋️</span>
+                <span class="goal-text">Aumentar masa muscular</span>
+
+            </div>
+        </div>  
+
+        <div class="profile-section">
+            <h2>Datos Personales</h2>
+            <div class="profile-data">
+                <div class="data-item">
+                    <span class="data-label">Edad:</span>
+                    <span class="data-value">28 años</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Altura:</span>
+                    <span class="data-value">175 cm</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">Peso:</span>
+                    <span class="data-value">72 kg</span>
+                </div>
+                <div class="data-item">
+                    <span class="data-label">IMC:</span>
+                    <span class="data-value">23.5 <span class="imc-status">(Normal)</span></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2>Mi Progreso Hoy</h2>
+            <div class="charts-container">
+                <div class="chart-wrapper">
+                    <canvas id="caloriesChart"></canvas>
+                    <div class="chart-info">
+                        <h3>Calorías</h3>
+                        <p class="chart-progress">1,850 / 2,732 kcal</p>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="proteinChart"></canvas>
+                    <div class="chart-info">
+                        <h3>Proteínas</h3>
+                        <p class="chart-progress">85 / 126 g</p>
+                    </div>
+                </div>
+                <div class="chart-wrapper">
+                    <canvas id="carbsChart"></canvas>
+                    <div class="chart-info">
+                        <h3>Carbohidratos</h3>
+                        <p class="chart-progress">210 / 352 g</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="profile-section">
+            <h2>Objetivos Diarios</h2>
+            <div class="goals-container">
+                <div class="goal-card">
+                    <h3>Calorías</h3>
+                    <p>2,732 kcal</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Proteínas</h3>
+                    <p>126 g</p>
+                </div>
+                <div class="goal-card">
+                    <h3>Carbohidratos</h3>
+                    <p>352 g</p>
+                </div>
+            </div>
+        </div>
+        <div class="buttons-container">
+        <a href="registro.html" class="edit-profile-btn">Editar Perfil </a>
+        </div>
+
+    </div>
+
+    <script>
+        // Configuración de los gráficos de barras
+        const caloriesCtx = document.getElementById('caloriesChart').getContext('2d');
+        const proteinCtx = document.getElementById('proteinChart').getContext('2d');
+        const carbsCtx = document.getElementById('carbsChart').getContext('2d');
+
+        // Opciones comunes para los gráficos
+        const chartOptions = {
+            responsive: true,
+            maintainAspectRatio: false,
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    max: 100,
+                    display: false,
+                    grid: {
+                        display: false
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false
+                    },
+                    ticks: {
+                        display: false
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                tooltip: {
+                    enabled: false
+                }
+            },
+            barPercentage: 0.4,
+            borderRadius: 8
+        };
+
+        // Gráfico de Calorías
+        new Chart(caloriesCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Consumido', 'Meta'],
+                datasets: [{
+                    data: [68, 100], // 1850/2732 ≈ 68%
+                    backgroundColor: [
+                        '#3498db',
+                        '#ecf0f1'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: chartOptions
+        });
+
+        // Gráfico de Proteínas
+        new Chart(proteinCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Consumido', 'Meta'],
+                datasets: [{
+                    data: [67, 100], // 85/126 ≈ 67%
+                    backgroundColor: [
+                        '#2ecc71',
+                        '#ecf0f1'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: chartOptions
+        });
+
+        // Gráfico de Carbohidratos
+        new Chart(carbsCtx, {
+            type: 'bar',
+            data: {
+                labels: ['Consumido', 'Meta'],
+                datasets: [{
+                    data: [60, 100], // 210/352 ≈ 60%
+                    backgroundColor: [
+                        '#e74c3c',
+                        '#ecf0f1'
+                    ],
+                    borderWidth: 0
+                }]
+            },
+            options: chartOptions
+        });
+    </script>
+</body>
+</html>
